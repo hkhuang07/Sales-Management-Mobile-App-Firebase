@@ -1,8 +1,4 @@
-# Sales Management App
-
-[![GitHub license](https://img.shields.io/github/license/hkhuang07/SalesManagementApp.svg)](https://github.com/hkhuang07/SalesManagementApp/blob/main/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/hkhuang07/SalesManagementApp.svg?style=social)](https://github.com/hkhuang07/SalesManagementApp/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/hkhuang07/SalesManagementApp.svg?style=social)](https://github.com/hkhuang07/SalesManagementApp/network/members)
+# Sales Management Mobile App Firebase 
 
 An Android application designed for efficient sales and product management, offering distinct functionalities for both administrators and regular users. This app streamlines inventory, order processing, and user interactions within a sales ecosystem.
 
