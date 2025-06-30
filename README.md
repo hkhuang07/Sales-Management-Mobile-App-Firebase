@@ -51,7 +51,7 @@ To get a local copy up and running, follow these simple steps.
 
 1.  **Clone the repository:**
     ```
-    git clone [https://github.com/hkhuang07/SalesManagementApp.git](https://github.com/hkhuang07/SalesManagementApp.git)
+    git clone [https://github.com/hkhuang07/Sales-Management-Mobile-App-Firebase.git](https://github.com/hkhuang07/Sales-Management-Mobile-App-Firebase.git)
     ```
 2.  **Open in Android Studio:**
     Open the cloned project folder in Android Studio.
