@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrdersListActivity">
+    <!--android:background="#E0FFFF"-->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_orders_list"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#104E8B"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="All Orders"
+        app:titleTextColor="#F0F8FF"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_orders"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="8dp"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_orders_list"
+        tools:listitem="@layout/orders_list_item_row"
+        android:contentDescription="Orders List"/>
+
+    <TextView
+        android:id="@+id/text_view_no_orders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No orders found."
+        android:visibility="gone"
+        android:textSize="18sp"
+        android:textColor="#333333"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_orders_list"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_my_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_myorder"
+        app:backgroundTint="#104E8B"
+        app:tint="#F0F8FF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="Open Cart" />
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar_orders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_orders_list"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

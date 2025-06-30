@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#191970">
+
+        <TextView
+            android:id="@+id/text_view_order_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order ID:"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#F0F8FF"/>
+
+        <TextView
+            android:id="@+id/text_view_user_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="User:"
+            android:textColor="#F0FFFF"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/text_view_order_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Date: "
+            android:textColor="#F0FFFF"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/text_view_total_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Total:"
+            android:textStyle="bold"
+            android:textColor="#98F5FF"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/text_view_order_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status: "
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10px"
+            android:layout_marginBottom="10dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingVertical="4dp"
+            android:background="@drawable/rounded_status_background"
+            android:textColor="#F0F8FF"/>
+
+        <TextView
+            android:id="@+id/text_view_item_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Items: "
+            android:textColor="#E6E6FA"
+            android:textSize="13sp"
+            android:maxLines="2"
+            android:ellipsize="end"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:gravity="end">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_view_order_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Details"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="#1E90FF"
+                android:textColor="#F0F8FF"
+                style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+            <!--com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_update_order_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Update Status"
+                android:backgroundTint="#1E90FF"
+                android:textColor="#F0F8FF"
+                style="@style/Widget.MaterialComponents.Button.TextButton"/-->
+        </LinearLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

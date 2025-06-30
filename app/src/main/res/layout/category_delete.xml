@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#F0F8FF">
+    <TextView
+        android:id="@+id/dialog_catetitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm category deletion"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#191970"
+        android:layout_marginBottom="16dp"/>
+
+
+    <TextView
+        android:id="@+id/dialog_category_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Category name: "
+        android:textColor="#333333"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/dialog_category_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textSize="16sp"
+        android:textColor="#555555"
+        android:layout_marginBottom="15dp"/>
+
+    <TextView
+        android:id="@+id/dialog_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Are you sure you want to remove this category from your list? This action cannot be undone."
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/button_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textColor="#104E8B"
+            android:backgroundTint="#63B8FF"
+            android:layout_marginEnd="10dp"/>
+
+        <Button
+            android:id="@+id/button_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:textColor="#F0F8FF"
+            android:backgroundTint="#6495ED"/>
+
+    </LinearLayout>
+
+</LinearLayout>

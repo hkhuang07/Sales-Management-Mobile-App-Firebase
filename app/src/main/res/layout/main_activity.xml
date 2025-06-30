@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="?attr/actionBarSize"
+    tools:context=".MainActivity">
+    <!--android:background="#E0FFFF"-->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_main"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#104E8B"
+        android:theme="?attr/actionBarTheme"
+        app:title="Sales Management"
+        app:titleTextColor="#F0F8FF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/text_view_welcome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Sale Management! \nThe place to sell more conveniently than ever"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="#4876FF"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_main"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <GridLayout
+        android:id="@+id/grid_layout_main_features"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:columnCount="3"
+        android:rowCount="2"
+        android:alignmentMode="alignMargins"
+        android:columnOrderPreserved="false"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/text_view_welcome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/fab_cart"
+        app:layout_constraintVertical_bias="0"
+        android:layout_marginBottom="16dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_shopping"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="16dp"
+                android:background="#1C86EE">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:contentDescription="Icon Lịch sử Đơn hàng"
+                    android:src="@drawable/ic_sale"
+                    app:tint="#191970" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Shopping"
+                    android:textColor="#F0F8FF"
+                    android:textSize="12sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_profile"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="16dp"
+                android:background="#009ACD">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ic_account"
+                    app:tint="#191970"
+                    android:contentDescription="Icon Customer Manager"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Profile"
+                    android:textColor="#F0F8FF"
+                    android:textSize="12sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_order_list"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="16dp"
+                android:background="#1E90FF">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ic_list_obj"
+                    app:tint="#191970"
+                    android:contentDescription="Icon Danh sách Danh mục"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Orders"
+                    android:textColor="#F0F8FF"
+                    android:textSize="12sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_items_list"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="16dp"
+                android:background="#6495ED">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ic_items"
+                    app:tint="#191970"
+                    android:contentDescription="Icon List Item"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Items"
+                    android:textColor="#F0F8FF"
+                    android:textSize="12sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_categories_list"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="16dp"
+                android:background="#4169E1">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ic_category"
+                    app:tint="#191970"
+                    android:contentDescription="Icon Danh sách Danh mục"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Categories"
+                    android:textColor="#F0F8FF"
+                    android:textSize="12sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_users"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="16dp"
+                android:background="#00B2EE">
+
+                <ImageView
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ic_group"
+                    app:tint="#191970"
+                    android:contentDescription="Icon Customer Manager"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Users"
+                    android:textColor="#F0F8FF"
+                    android:textSize="12sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </GridLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:contentDescription="Open Cart"
+        android:focusable="true"
+        android:src="@drawable/ic_shopping_cart"
+        app:backgroundTint="#104E8B"
+        app:layout_constraintBottom_toTopOf="@id/layout_auth_buttons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="#F0F8FF" />
+
+    <LinearLayout
+        android:id="@+id/layout_auth_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#191970"
+            android:text="Login"
+            android:textColor="#E0FFFF"
+            app:icon="@drawable/ic_login"
+            app:iconGravity="textStart"
+            app:iconPadding="5dp"
+            app:iconTint="#E0FFFF" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#4682B4"
+            android:text="Logout"
+            android:textColor="#E0FFFF"
+            android:visibility="gone"
+            app:icon="@drawable/ic_logout"
+            app:iconGravity="textStart"
+            app:iconPadding="8dp"
+            app:iconTint="#E0FFFF" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#27408B"
+            android:text="Settings"
+            android:textColor="#E0FFFF"
+            app:icon="@drawable/ic_create_data"
+            app:iconGravity="textStart"
+            app:iconPadding="5dp"
+            app:iconTint="#E0FFFF" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

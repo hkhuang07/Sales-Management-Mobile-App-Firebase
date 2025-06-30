@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="General Settings">
+
+        <SwitchPreferenceCompat
+            app:key="notifications_enabled"
+            app:title="Enable Notifications"
+            app:summary="Receive important updates and alerts"
+            app:defaultValue="false"
+            app:icon="@drawable/ic_notifications" />
+        <EditTextPreference
+        app:key="username"
+        app:title="Username"
+        app:summary="Display name in the app"
+        app:defaultValue="Guest User"
+        app:useSimpleSummaryProvider="true"
+        app:icon="@drawable/ic_person" />
+        <ListPreference
+        app:key="theme_selection"
+        app:title="App Theme"
+        app:entries="@array/theme_entries"
+        app:entryValues="@array/theme_values"
+        app:defaultValue="light"
+        app:useSimpleSummaryProvider="true"
+        app:icon="@drawable/ic_palette" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="Account">
+
+        <Preference
+            app:key="logout_account"
+            app:title="Logout"
+            app:summary="Sign out from your account"
+            app:icon="@drawable/ic_logout" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="About">
+
+        <Preference
+            app:key="about_app"
+            app:title="About App"
+            app:summary="Version and legal information"
+            app:icon="@drawable/ic_infor" />
+        <Preference
+        app:key="contact"
+        app:title="Contact Website"
+        app:summary="Contact us for more information"
+        app:icon="@drawable/ic_contact" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

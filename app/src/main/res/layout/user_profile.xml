@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UserProfileActivity"> <!-- Đã đổi tên context thành UserProfileActivity cho nhất quán -->
+
+    <!-- Toolbar - Đã sửa layout_width thành match_parent và xóa các constraint layout thuộc tính -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarprofile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="#104E8B"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="User Profile"
+        app:titleTextColor="#F0F8FF"
+    />
+
+    <!-- Toàn bộ phần nội dung còn lại sẽ nằm bên dưới Toolbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal"> <!-- Đặt gravity để căn giữa các button và TextInputEditText -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personal information"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="32dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:startIconDrawable="@drawable/ic_person">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_profile_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="      Full name"
+                android:enabled="false"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:startIconDrawable="@drawable/ic_email">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_profile_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="      Email"
+                android:enabled="false"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:startIconDrawable="@drawable/ic_balance">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_profile_balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="      Balance"
+            android:enabled="false"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:startIconDrawable="@drawable/ic_phone">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_profile_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="      Phone number"
+                android:inputType="phone"
+                android:enabled="false"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:startIconDrawable="@drawable/ic_location">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_profile_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="      Address"
+                android:inputType="textPostalAddress"
+                android:enabled="false"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/button_save_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save Change"
+            android:backgroundTint="#104E8B"
+            android:textColor="#F0F8FF"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/button_edit_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#191970"
+            android:textColor="#F0F8FF"
+            android:text="Edit"
+            android:layout_gravity="center_horizontal"/>
+
+        <Button
+            android:id="@+id/button_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#6495ED"
+            android:textColor="#F0F8FF"
+            android:text="Log out" />
+
+    </LinearLayout>
+
+</LinearLayout>

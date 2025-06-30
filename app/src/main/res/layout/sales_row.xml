@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#27408B"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/image_view_sale_image"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            android:src="@android:drawable/sym_def_app_icon"/>
+
+        <TextView
+            android:id="@+id/text_view_sale_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Product Name"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#F0F8FF"/>
+
+        <TextView
+            android:id="@+id/text_view_sale_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Price: "
+            android:textSize="18sp"
+            android:textColor="#98F5FF"/>
+
+        <TextView
+            android:id="@+id/text_view_sale_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="description"
+            android:textSize="14sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="#E6E6FA"/>
+
+        <TextView
+            android:id="@+id/text_view_sale_stock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="In Stock: 100"
+            android:textSize="14sp"
+            android:textColor="#F0FFFF"/>
+
+        <TextView
+            android:id="@+id/text_view_sale_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Category: "
+            android:textSize="14sp"
+
+            android:textColor="#F0FFFF"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:gravity="end">
+
+            <Button
+                android:id="@+id/button_add_to_cart_sale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#4F94CD"
+                android:text="Add to Cart"
+                android:layout_marginEnd="8dp"
+                />
+            <Button
+                android:id="@+id/button_buy_now_sale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#1E90FF"
+                android:text="Buy Now"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

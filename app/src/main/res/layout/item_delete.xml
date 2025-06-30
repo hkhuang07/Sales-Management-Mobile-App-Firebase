@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#F0F8FF">
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm product deletion"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#191970"
+        android:layout_marginBottom="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="24dp"
+        android:background="#191970"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/dialog_item_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:src="@android:drawable/sym_def_app_icon"
+            android:layout_marginEnd="16dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dialog_item_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Product name"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#F0F8FF"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/dialog_item_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="price: 0.00 VND"
+                android:textSize="16sp"
+                android:textColor="#98F5FF"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/dialog_item_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Current quantity in stock: 0"
+                android:textSize="14sp"
+                android:textColor="#E6E6FA"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dialog_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Are you sure you want to delete this product?"
+        android:textSize="16sp"
+        android:textColor="#104E8B"
+        android:layout_marginBottom="24dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/button_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:backgroundTint="#63B8FF"
+            android:textColor="#F0F8FF"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/button_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:backgroundTint="#6495ED"
+            android:textColor="#F0F8FF"/>
+    </LinearLayout>
+</LinearLayout>

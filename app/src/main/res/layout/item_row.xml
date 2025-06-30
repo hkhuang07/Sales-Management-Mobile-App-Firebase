@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:backgroundTint="#191970"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/image_view_item"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:src="@android:drawable/sym_def_app_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </ImageView>
+
+        <LinearLayout
+            android:id="@+id/layout_item_details"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_view_item"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/text_view_item_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Item Name"
+                android:textColor="#F0F8FF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="Item Name" />
+
+            <TextView
+                android:id="@+id/text_view_item_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:hint="Category: electrics, books, clothes etc"
+                android:textColor="#D1EEEE"
+                android:textSize="14sp"
+                tools:text="Category" />
+
+            <TextView
+                android:id="@+id/text_view_item_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:hint="Price"
+                android:textColor="#F0FFFF"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                tools:text="Price" />
+
+            <TextView
+                android:id="@+id/text_view_item_current_quantity_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:hint="Current in stock"
+                android:textColor="#F0FFFF"
+                android:textSize="14sp"
+                tools:text="Current in stock" />
+
+
+            <!--LinearLayout
+                android:id="@+id/layout_quantity_controls"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="0.1">
+
+
+                <ImageButton
+                    android:id="@+id/button_remove_item"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Decrease item quantity"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_subtract"
+                    app:tint="#40E0D0" />
+
+                <TextView
+                    android:id="@+id/text_view_cart_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="0"
+                    android:textColor="#F0FFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:text="5" />
+
+                <ImageButton
+                    android:id="@+id/button_add_item"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Increase the number of products"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_add_obj"
+                    app:tint="#76EEC6" />
+
+            </LinearLayout-->
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

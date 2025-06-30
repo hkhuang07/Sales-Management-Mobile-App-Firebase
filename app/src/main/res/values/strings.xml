@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Sales Management</string>
+    <string name="content_description_item_list">Products List</string>
+    <string name="product_image_description">Image Description</string>
+    <string name="default_web_client_id">648478697653-jvh2ev12ffl6l848vi1m425d38oo1b4m.apps.googleusercontent.com</string>
+    <string name="default_notification_channel_id" translatable="false">default_channel</string>
+</resources>

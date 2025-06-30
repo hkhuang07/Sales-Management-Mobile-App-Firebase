@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#191970">
+    <TextView
+        android:id="@+id/text_view_category_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Category Name"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#F0F8FF" />
+
+    <TextView
+        android:id="@+id/text_view_category_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        tools:text="This category description could be about products of this type, for example: electronics, clothing, food, etc."
+        android:textSize="16sp"
+        android:textColor="#D1EEEE" />
+
+</LinearLayout>
+
+</androidx.cardview.widget.CardView>

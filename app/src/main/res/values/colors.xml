@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="midnightblue">#191970</color>
+
+
+    <color name="primaryColor">#00796B</color>
+    <color name="primaryLightColor">#48A999</color>
+    <color name="primaryDarkColor">#004C40</color>
+    <color name="secondaryColor">#FFC107</color>
+    <color name="secondaryLightColor">#FFF350</color>
+    <color name="secondaryDarkColor">#C79100</color>
+    <color name="primaryTextColor">#FFFFFF</color>
+    <color name="secondaryTextColor">#000000</color>
+    <color name="backgroundColor">#E0F2F1</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="status_pending">#FFC107</color>
+    <color name="status_confirmed">#007BFF</color>
+    <color name="status_shipped">#17A2B8</color>
+    <color name="status_delivered">#28A745</color>
+    <color name="status_cancelled">#DC3545</color>
+
+</resources>

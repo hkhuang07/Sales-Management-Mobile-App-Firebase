@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CategoriesListActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarcategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="#104E8B"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="Categories List"
+        app:titleTextColor="#F0F8FF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAddCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#104E8B"
+        android:text="Add"
+        android:textColor="#E0FFFF"
+        app:icon="@drawable/ic_add_obj"
+        app:iconGravity="textStart"
+        app:iconTint="#E0FFFF"
+        app:iconPadding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarcategory"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="Add New Category"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_categories"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/btnAddCategory"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="8dp"
+        android:scrollbars="vertical"
+        android:importantForAccessibility="no" tools:listitem="@layout/category_row" />
+
+    <TextView
+        android:id="@+id/text_view_empty_categories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="There are no categories yet."
+        android:textSize="18sp"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="center"
+        android:visibility="gone"
+        android:contentDescription="List of categories is currently empty." app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAddCategory"
+        app:layout_constraintVertical_bias="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

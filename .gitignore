@@ -1,0 +1,72 @@
+# Built application files
+*.apk
+*.ap_
+*.aab
+*.aar
+*.dex
+*.oat
+*.so
+
+# Files for the ART/Dalvik VM
+*.interp
+*.prof
+*.vmprof
+
+# Folder for Android Studio's built files
+/build/
+/.gradle/
+.idea/
+/local.properties
+/out/
+
+# Local configuration files (Eclipse)
+.classpath
+.project
+.settings/
+
+# Crashlytics/Fabric
+fabric/
+
+# NDK JNI Libs
+.externalNativeBuild/
+
+# AOSP related files
+*.iml
+.cxx/
+.external_build
+
+# Keystore files
+*.jks
+*.keystore
+
+# Google Services JSON file (IMPORTANT: DO NOT COMMIT THIS!)
+# This file contains sensitive API keys and configuration for your Firebase project.
+# It should be kept private and never committed to a public repository.
+/app/google-services.json
+
+# Local Environment Variables (if any)
+.env
+.env.*
+
+# Others
+proguard-project.txt
+lint-results.html
+lint-results.xml
+captures/
+.checkstyle/
+checkstyle-result.xml
+app/libs/
+!app/libs/.gitkeep # If you have .gitkeep in libs, allow it
+
+# Android Studio Generated Files
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/gradle.xml # If you manually configured this, you might want to keep it
+# But generally, it's safe to ignore for cross-developer consistency.
+
+# Gradle Files
+*.log
+.DS_Store # macOS specific
+Thumbs.db # Windows specific

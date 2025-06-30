@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#191970">
+
+        <TextView
+            android:id="@+id/text_view_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Name:"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#F0F8FF"/>
+
+        <TextView
+            android:id="@+id/text_view_user_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Email: "
+            android:textColor="#E6E6FA"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/text_view_user_role"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Role: "
+            android:textColor="#98F5FF"
+            android:textSize="14sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:gravity="end">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_view_user_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View Profile"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="#4682B4"
+                android:textColor="#F0F8FF"
+                style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_manage_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Manage"
+                android:backgroundTint="#1E90FF"
+                android:textColor="#F0F8FF"
+                style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

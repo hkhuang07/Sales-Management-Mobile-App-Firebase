@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ItemsAddEditActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tolMain"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:backgroundTint="#104E8B"
+            app:title="Item Details"
+            app:titleTextColor="#F0F8FF"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp"
+                android:text="Enter Item Details"
+                android:textColor="#4169E1"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item Image:"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/imgItem"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:src="@android:drawable/sym_def_app_icon"
+                    android:contentDescription="Item image"
+                    android:layout_marginEnd="16dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSelectImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Image"
+                    app:icon="@drawable/ic_photo_camera"
+                    app:iconTint="@color/white"
+                    android:backgroundTint="#4169E1"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:hint="Item ID">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:enabled="false"
+                    android:text="Auto-generated (or existing ID)" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:hint="Item Name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:hint="Quantity">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtQuantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:hint="Price (đ)">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/category_text_input_layout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Category"
+                android:layout_marginBottom="12dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/spinner_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:contentDescription="Select item category"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:hint="Description">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:lines="4"
+                    android:gravity="top|start" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#191970"
+                android:text="Submit"
+                android:textColor="#E0FFFF"
+                app:icon="@drawable/ic_submit" app:iconGravity="textStart"
+                app:iconTint="#E0FFFF"
+                app:iconPadding="8dp"
+                android:paddingVertical="12dp"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

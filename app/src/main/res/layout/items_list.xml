@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ItemsListActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="#104E8B"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="Items List"
+        app:titleTextColor="#F0F8FF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#104E8B"
+        android:text="Add New"
+        android:textColor="#E0FFFF"
+        app:icon="@drawable/ic_add_obj"
+        app:iconGravity="textStart"
+        app:iconTint="#E0FFFF"
+        app:iconPadding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_items"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/content_description_item_list"
+        android:padding="8dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAdd"
+        app:layout_constraintVertical_bias="1.0"
+        tools:listitem="@layout/item_row" />
+
+    <TextView
+        android:id="@+id/text_view_empty_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No item yet."
+        android:textSize="18sp"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAdd"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <!--com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_shopping_cart"
+        app:backgroundTint="#104E8B"
+        app:tint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="Open Cart" /-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

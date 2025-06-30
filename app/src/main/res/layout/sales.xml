@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SalesActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_sales"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#104E8B"
+        app:titleTextColor="#F0F8FF"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:title="Available Products" />
+
+    <EditText
+        android:id="@+id/edit_text_search_sales"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search products..."
+        android:padding="12dp"
+        android:layout_margin="8dp"
+        android:drawableStart="@android:drawable/ic_search_category_default"
+        android:drawablePadding="8dp"
+        android:inputType="text"
+        android:maxLines="1"
+        android:singleLine="true"/>
+
+    <ProgressBar
+        android:id="@+id/progress_bar_sales"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/text_view_no_sales_products"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No products available for sale."
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:textSize="18sp"
+        android:textColor="@android:color/darker_gray"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_sales_products"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:scrollbars="vertical"
+        android:contentDescription="Product List"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_shopping_cart"
+            app:backgroundTint="#104E8B"
+            app:tint="@android:color/white"
+            android:contentDescription="Open Cart" />
+
+    </FrameLayout>
+
+</LinearLayout>

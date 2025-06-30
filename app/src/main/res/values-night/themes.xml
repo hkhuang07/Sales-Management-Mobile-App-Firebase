@@ -1,0 +1,37 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SalesManagement" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
+
+    <style name="Theme.YourAppName" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryDarkColor</item>
+        <item name="colorOnPrimary">@color/primaryTextColor</item>
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorSecondaryVariant">@color/secondaryDarkColor</item>
+        <item name="colorOnSecondary">@color/secondaryTextColor</item>
+        <item name="android:statusBarColor">@color/primaryColor</item>
+        <item name="materialButtonStyle">@style/AppButton.Colored</item>
+    </style>
+
+    <style name="AppButton.Colored" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/primaryColor</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="cornerRadius">8dp</item> <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <style name="AppButton.Secondary" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/secondaryColor</item>
+        <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+</resources>

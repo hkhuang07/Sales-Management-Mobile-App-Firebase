@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#191970"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:id="@+id/linear_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/image_view_cart_item_thumbnail"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:contentDescription="Item Picture in cart"
+            android:scaleType="centerCrop"
+            android:src="@android:drawable/sym_def_app_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linear_layout_cart_item_infor"
+            android:layout_width="270dp"
+            android:layout_height="100dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/text_view_cart_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="8dp"
+                android:text="Item Name"
+                android:textColor="#F0F8FF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/linear_layout_cart_quantity_control"
+                app:layout_constraintStart_toEndOf="@id/image_view_cart_item_thumbnail"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Item Name" />
+
+            <TextView
+                android:id="@+id/text_view_cart_item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:text="Price"
+                android:textColor="#F0FFFF"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/linear_layout_cart_quantity_control"
+                app:layout_constraintStart_toEndOf="@id/image_view_cart_item_thumbnail"
+                app:layout_constraintTop_toBottomOf="@id/text_view_cart_item_name"
+                tools:text="Price" />
+            <TextView
+                android:id="@+id/text_view_cart_item_subtotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:text="Subtotal: "
+                android:textColor="#F0FFFF"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/linear_layout_cart_quantity_control"
+                app:layout_constraintStart_toEndOf="@id/image_view_cart_item_thumbnail"
+                app:layout_constraintTop_toBottomOf="@id/text_view_cart_item_name"
+                tools:text="Subtotal: " />
+
+            <LinearLayout
+                android:id="@+id/linear_layout_cart_quantity_control"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/button_cart_remove"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="descrease items quantity"
+                    android:padding="4dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_subtract"
+                    app:tint="#40E0D0" />
+
+                <TextView
+                    android:id="@+id/text_view_cart_quantity_display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:gravity="center"
+                    android:minWidth="24dp"
+                    android:text="1"
+                    android:textColor="#F0FFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="10" />
+
+                <ImageButton
+                    android:id="@+id/button_cart_add"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Increase items quantity"
+                    android:padding="4dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_add_obj"
+                    app:tint="#76EEC6" />
+
+                <ImageButton
+                    android:id="@+id/button_cart_delete"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="8dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Remove item from cart"
+                    android:padding="4dp"
+                    android:scaleType="fitCenter"
+                    android:src="@android:drawable/ic_menu_delete"
+                    app:tint="#6CA6CD" />
+
+            </LinearLayout>
+        </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
