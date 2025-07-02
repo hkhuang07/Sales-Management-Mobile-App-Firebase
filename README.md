@@ -8,10 +8,10 @@ An Android application designed for efficient sales and product management, offe
   <img src="demo/checkout.gif" width="900" height="400">
   <img src="demo/categories.gif" width="900" height="400">
   <img src="demo/items.gif" width="900" height="400">  
-  <img src="demo/orders.gif" width="225" height="600">
-  <img src="demo/users.gif" width="225" height="600">
-  <img src="demo/userprofile.gif"width="225" height="600">
-  <img src="demo/settings.gif" width="225" height="600">
+  <img src="demo/orders.gif" width="225" height="500">
+  <img src="demo/users.gif" width="225" height="500">
+  <img src="demo/userprofile.gif"width="225" height="500">
+  <img src="demo/settings.gif" width="225" height="500">
 </p>
 ## 🌟 Features
 
