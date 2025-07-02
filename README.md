@@ -13,7 +13,8 @@ An Android application designed for efficient sales and product management, offe
   <img src="demo/userprofile.gif"width="225" height="500">
   <img src="demo/settings.gif" width="225" height="500">
 </p>
-## 🌟 Features
+
+## 🌟 Features.
 
 * **User Authentication:** Secure login/logout with Firebase Authentication (Email/Password & Google Sign-In).
 * **Role-Based Access Control:**
