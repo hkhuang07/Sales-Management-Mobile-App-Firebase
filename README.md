@@ -117,7 +117,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📞 Contact
 
-Huynh Quoc Huy - [huykyunh.k@gmail.com (Optional)] - [https://github.com/hkhuang07/(Optional)]
+Huynh Quoc Huy - [huykyunh.k@gmail.com (Optional)] - [https://github.com/hkhuang07/]
 
 Project Link: [https://github.com/hkhuang07/Sales-Management-Mobile-App-Firebase](https://github.com/hkhuang07/Sales-Management-Mobile-App-Firebase)
 
