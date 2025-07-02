@@ -3,10 +3,10 @@
 An Android application designed for efficient sales and product management, offering distinct functionalities for both administrators and regular users. This app streamlines inventory, order processing, and user interactions within a sales ecosystem.
 ## Visualization.
 <p align="center">
-  <img src="demo/authentication.gif" width="400" height="150">
-  <img src="demo/checkout.gif" width="500" height="150">
-  <img src="demo/categories.gif" width="500" height="150"></br>
-  <img src="demo/items.gif" width="400" height="150"></br>
+  <img src="demo/authentication.gif" width="400" height="200">
+  <img src="demo/checkout.gif" width="400" height="200">
+  <img src="demo/categories.gif" width="400" height="200"></br>
+  <img src="demo/items.gif" width="400" height="200"></br>
    <img src="demo/buynow.gif" width="200" height="500">
   <img src="demo/orders.gif" width="200" height="500">
   <img src="demo/users.gif" width="200" height="500">
