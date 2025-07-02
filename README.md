@@ -6,7 +6,7 @@ An Android application designed for efficient sales and product management, offe
   <img src="demo/authentication.gif" width="100" height="200">
   <img src="demo/buynow.gif" width="100" height="200">
   <img src="demo/checkout.gif" width="100" height="200">
-  <img src="demo/categories.gif" width="100" height="200"><br/>
+  <img src="demo/categories.gif" width="100" height="200">
   <img src="demo/items.gif" width="100" height="200">  
   <img src="demo/orders.gif" width="100" height="200">
   <img src="demo/users.gif" width="100" height="200">
