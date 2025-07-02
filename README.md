@@ -4,10 +4,10 @@ An Android application designed for efficient sales and product management, offe
 ## Visualization.
 <p align="center">
   <img src="demo/authentication.gif" width="400" height="150">
-  <img src="demo/buynow.gif" width="400" height="150"></br>
-  <img src="demo/checkout.gif" width="400" height="150">
-  <img src="demo/categories.gif" width="400" height="150"></br>
+  <img src="demo/checkout.gif" width="500" height="150">
+  <img src="demo/categories.gif" width="500" height="150"></br>
   <img src="demo/items.gif" width="400" height="150"></br>
+   <img src="demo/buynow.gif" width="200" height="500">
   <img src="demo/orders.gif" width="200" height="500">
   <img src="demo/users.gif" width="200" height="500">
   <img src="demo/userprofile.gif"width="200" height="500">
