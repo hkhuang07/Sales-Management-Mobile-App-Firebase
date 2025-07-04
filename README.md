@@ -11,6 +11,7 @@ This mobile application provides a robust and intuitive platform for managing sa
 This approach ensures a scalable, reliable, and modern backend solution, allowing the app to handle user authentication, product catalogs, shopping carts, and order management with ease and efficiency.
 
 ---
+
 ## 📸 Visualization
 
 See the app in action with these animated demonstrations:
@@ -39,7 +40,7 @@ See the app in action with these animated demonstrations:
 
 <p align="center">
   <h3>Cart & Order Processing</h3>
-  <img src="demo/checkout.gif"  width="800" height="400">
+  <img src="demo/checkout.gif" width="800" height="400">
   <br>
   <em>Manage items in the cart and complete an order.</em>
 </p>
@@ -60,8 +61,6 @@ See the app in action with these animated demonstrations:
   <em>View and update user profiles, along with app settings for a personalized experience.</em>
 </p>
 
-
-
 ---
 
 ## 🛠️ Technologies Used
@@ -77,6 +76,7 @@ This application is built on a robust and modern technology stack, with **Google
 * **UI Components:** AndroidX, Material Design Components – for a consistent, modern, and user-friendly interface.
 
 ---
+
 ## 🌟 Features
 
 The application is packed with features designed to enhance sales operations and user experience:
@@ -116,29 +116,93 @@ To get a local copy of this project up and running on your development machine, 
 * **Java Development Kit (JDK) 11** or newer
 * A **Google Firebase Project** (properly set up for Android)
 
-### Installation
+### Installation & Configuration
 
-1.  **Clone the repository:**
+If you'd like to use this codebase and connect it to your own Firebase project for data storage and authentication, here's how to do it:
+
+1.  **Clone the Repository:**
+    First, you'll need to clone the project to your local machine. Open your terminal or Git Bash and run:
     ```bash
     git clone [https://github.com/hkhuang07/Sales-Management-Mobile-App-Firebase.git](https://github.com/hkhuang07/Sales-Management-Mobile-App-Firebase.git)
+    cd Sales-Management-Mobile-App-Firebase
     ```
+
 2.  **Open in Android Studio:**
-    Open the cloned project folder in Android Studio.
-3.  **Set up Firebase:**
-    * Go to the [Firebase Console](https://console.firebase.google.com/).
-    * Create a new Firebase project (if you don't have one).
-    * Add an Android app to your Firebase project.
-    * Follow the instructions to download your `google-services.json` file.
-    * Place `google-services.json` into your `app/` directory of the Android Studio project.
-    * **Enable the following services in your Firebase project:**
-        * **Authentication:** Enable Email/Password and Google Sign-in providers.
-        * **Cloud Firestore:** Initialize a Firestore database.
-        * **Cloud Messaging:** Enable this service for push notifications.
-    * **Set up Firestore Security Rules:** Configure appropriate security rules in your Firestore database to control read/write access. For basic functionality, you might start with rules that allow authenticated users to read and write specific collections, and admin users to have broader access. (E.g., `match /users/{userId} { allow read, write: if request.auth != null; }`, `match /products/{productId} { allow read: if true; allow write: if request.auth.token.admin == true; }`).
-4.  **Sync Gradle:**
-    Allow Android Studio to sync the project with Gradle files to download all necessary dependencies.
-5.  **Run the app:**
-    Connect an Android device or use an emulator, then click the "Run" button in Android Studio.
+    Open the cloned project folder in Android Studio. Android Studio will begin syncing the project and downloading necessary dependencies.
+
+3.  **Set up Your Own Firebase Project:**
+    This is the most crucial step to ensure your app connects to your own backend data.
+    * Go to the [Firebase Console](https://console.firebase.google.com/) and sign in with your Google account.
+    * **Create a New Firebase Project:** Click "Add project" and follow the on-screen instructions. Give your project a meaningful name (e.g., "MySalesAppBackend").
+    * **Add an Android App to Your Firebase Project:**
+        * In your newly created Firebase project, click the Android icon (looks like an Android robot) to add an Android app.
+        * **Package name:** Enter your app's package name. You can find this in your Android Studio project in `app/build.gradle` under `applicationId`. It typically looks like `com.example.salesmanagement`.
+        * **App nickname:** (Optional) Give your app a friendly name.
+        * **SHA-1 certificate:** This is required for Google Sign-In and other Firebase services. To get your SHA-1 key:
+            * In Android Studio, open the **Gradle** pane (usually on the right side).
+            * Navigate to `Your Project Name > app > Tasks > android > signingReport`.
+            * Double-click `signingReport`. The SHA-1 key will appear in the "Run" window at the bottom. Copy it.
+            * Paste the SHA-1 key into the Firebase setup.
+        * Click "Register app".
+    * **Download `google-services.json`:** Firebase will prompt you to download the `google-services.json` file. **Download this file and place it directly into your Android Studio project's `app/` directory.** This file contains all the necessary configurations for your app to communicate with your Firebase project.
+    * **Enable Firebase Services:** In your Firebase Console, navigate to:
+        * **Authentication:** Go to "Build > Authentication" and click "Get started". Enable the **Email/Password** provider and the **Google** provider.
+        * **Cloud Firestore:** Go to "Build > Firestore Database" and click "Create database". Choose "Start in production mode" (or "test mode" for quick setup, but remember to secure your rules later) and select a location for your database.
+        * **Cloud Messaging:** Go to "Build > Cloud Messaging" to ensure it's enabled for push notifications.
+
+4.  **Set up Firestore Security Rules:**
+    This is crucial for controlling who can read and write data in your database.
+    * In your Firebase Console, go to "Build > Firestore Database > Rules".
+    * You'll need to define rules that allow your app to interact with the data. Here are some example starting points (adapt these to your specific needs for security):
+        ```firestore
+        rules_version = '2';
+        service cloud.firestore {
+          match /databases/{database}/documents {
+            // Allow all authenticated users to read and write to their own user profile
+            match /users/{userId} {
+              allow read, write: if request.auth != null && request.auth.uid == userId;
+            }
+
+            // Allow all authenticated users to read products
+            // Allow only 'admin' users to create, update, or delete products
+            match /products/{productId} {
+              allow read: if request.auth != null; // or if true for public read
+              allow create, update, delete: if request.auth != null && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+            }
+
+            // Similarly, for categories, carts, orders, order items:
+            match /categories/{categoryId} {
+              allow read: if request.auth != null;
+              allow create, update, delete: if request.auth != null && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+            }
+
+            // Carts: users can only manage their own cart items
+            match /carts/{cartId} {
+              allow read, write: if request.auth != null && request.auth.uid == cartId;
+            }
+
+            // Orders: users can only read their own orders; admins can read all
+            match /orders/{orderId} {
+              allow read: if request.auth != null && (request.auth.uid == resource.data.userId || get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin');
+              allow create: if request.auth != null;
+              allow update, delete: if request.auth != null && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+            }
+            // For order items, ensure read access is tied to the parent order's read access
+            match /orderItems/{orderItemId} {
+                allow read: if request.auth != null && (get(/databases/$(database)/documents/orders/$(resource.data.orderId)).data.userId == request.auth.uid || get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin');
+                allow create: if request.auth != null;
+                allow update, delete: if request.auth != null && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+            }
+          }
+        }
+        ```
+    * **Important:** These rules are examples. You'll need to adapt them based on your exact data model and desired access control. Always start with strict rules and then loosen them as needed, testing thoroughly.
+
+5.  **Sync Gradle:**
+    In Android Studio, ensure all necessary dependencies are downloaded by allowing Gradle to sync the project. You'll typically see a "Sync Now" button if changes were made (like adding `google-services.json`).
+
+6.  **Run the App:**
+    Connect an Android device to your computer or use an emulator in Android Studio. Then, click the "Run" button (green play icon) in Android Studio to deploy and test the application with your newly configured Firebase backend.
 
 ---
 
