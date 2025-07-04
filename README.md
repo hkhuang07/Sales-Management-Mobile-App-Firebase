@@ -71,7 +71,7 @@ See the app in action with these animated demonstrations:
   <h3>Cart & Order Processing</h3>
   <img src="demo/checkout.gif" width="400" height="200">
   <br>
-  <em>Managing items in the cart and completing an order.</em>
+  <em>Manage items in the cart and complete an order.</em>
 </p>
 
 <p align="center">
@@ -79,7 +79,7 @@ See the app in action with these animated demonstrations:
   <img src="demo/orders.gif" width="200" height="500">
   <img src="demo/users.gif" width="200" height="500">
   <br>
-  <em>Admins can view all orders, and manage user accounts. Regular users can view their order history.</em>
+  <em>Admins can view all orders and manage user accounts. Regular users can view their order history.</em>
 </p>
 
 <p align="center">
@@ -87,7 +87,7 @@ See the app in action with these animated demonstrations:
   <img src="demo/userprofile.gif" width="200" height="500">
   <img src="demo/settings.gif" width="200" height="500">
   <br>
-  <em>Viewing and updating user profiles, along with app settings for a personalized experience.</em>
+  <em>View and update user profiles, along with app settings for a personalized experience.</em>
 </p>
 
 ---
@@ -152,8 +152,8 @@ Here's an overview of the key files and directories within the project:
 * `app/src/main/java/com/example/salesmanagement/CategoriesListActivity.java`: Handles category management (primarily for admin users).
 * `app/src/main/java/com/example/salesmanagement/SalesActivity.java`: Provides the product Browse and purchasing interface for regular users.
 * `app/src/main/java/com.example/salesmanagement/CartsActivity.java`: Manages the user's shopping cart.
-* `app/src/main/java/com/example/salesmanagement/OrdersListActivity.java`: Displays all orders (for admin users).
-* `app/src/main/java/com/example/salesmanagement/OrderHistoryActivity.java`: Shows a regular user's personal order history.
+* `app/src/main/java/com.example/salesmanagement/OrdersListActivity.java`: Displays all orders (for admin users).
+* `app/src/main/java/com.example/salesmanagement/OrderHistoryActivity.java`: Shows a regular user's personal order history.
 * `app/src/main/java/com.example/salesmanagement/UserProfileActivity.java`: Allows users to view and potentially update their profile information.
 * `app/src/main/java/com.example/salesmanagement/SettingsActivity.java`: Contains app settings, including theme and notification preferences.
 * `app/src/main/java/com.example/salesmanagement/MyFirebaseMessagingService.java`: Handles incoming FCM notifications.
@@ -189,4 +189,3 @@ Distributed under the MIT License. See `LICENSE` for more information.
 Huynh Quoc Huy - [huykyunh.k@gmail.com](mailto:huykyunh.k@gmail.com)
 
 Project Link: [https://github.com/hkhuang07/Sales-Management-Mobile-App-Firebase](https://github.com/hkhuang07/Sales-Management-Mobile-App-Firebase)
-
