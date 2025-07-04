@@ -24,38 +24,38 @@ See the app in action with these animated demonstrations:
 
 <p align="center">
   <h3>Product & Category Management (Admin View)</h3>
-  <img src="demo/categories.gif" width="400" height="200">
-  <img src="demo/items.gif" width="400" height="200">
+  <img src="demo/categories.gif" width="1000" height="500">
+  <img src="demo/items.gif" width="1000" height="500">
   <br>
   <em>Admins can easily manage product categories and individual items.</em>
 </p>
 
 <p align="center">
   <h3>Shopping & Checkout Experience (Regular User View)</h3>
-  <img src="demo/buynow.gif" width="800" height="400">
+  <img src="demo/buynow.gif" width="1000" height="500">
   <br>
   <em>Browse products, adding to cart, and proceeding to checkout.</em>
 </p>
 
 <p align="center">
   <h3>Cart & Order Processing</h3>
-  <img src="demo/checkout.gif" width="400" height="200">
+  <img src="demo/checkout.gif"  width="1000" height="500">
   <br>
   <em>Manage items in the cart and complete an order.</em>
 </p>
 
 <p align="center">
   <h3>Order & User Management</h3>
-  <img src="demo/orders.gif" width="200" height="500">
-  <img src="demo/users.gif" width="200" height="500">
+  <img src="demo/orders.gif" width="200" height="800">
+  <img src="demo/users.gif" width="200" height="800">
   <br>
   <em>Admins can view all orders and manage user accounts. Regular users can view their order history.</em>
 </p>
 
 <p align="center">
   <h3>User Profile & Settings</h3>
-  <img src="demo/userprofile.gif" width="200" height="500">
-  <img src="demo/settings.gif" width="200" height="500">
+  <img src="demo/userprofile.gif" width="200" height="800">
+  <img src="demo/settings.gif" width="200" height="800">
   <br>
   <em>View and update user profiles, along with app settings for a personalized experience.</em>
 </p>
