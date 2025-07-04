@@ -11,36 +11,6 @@ This mobile application provides a robust and intuitive platform for managing sa
 This approach ensures a scalable, reliable, and modern backend solution, allowing the app to handle user authentication, product catalogs, shopping carts, and order management with ease and efficiency.
 
 ---
-
-## 🌟 Features
-
-The application is packed with features designed to enhance sales operations and user experience:
-
-* **User Authentication:** Secure login/logout using Firebase Authentication, supporting both Email/Password and Google Sign-In for a smooth user onboarding experience.
-* **Role-Based Access Control:**
-    * **Admin Users:** Full administrative privileges to manage products, categories, users, and view all orders.
-    * **Regular Users:** Can browse products, add items to their cart, place orders, and track their personal order history.
-* **Product Management:**
-    * View a comprehensive list of products.
-    * **(Admin)** Complete CRUD (Create, Read, Update, Delete) operations for products.
-* **Category Management:**
-    * View product categories to organize items efficiently.
-    * **(Admin)** Full CRUD capabilities for categories.
-* **Shopping Cart System:** (For Regular Users)
-    * Seamlessly add products to a dynamic shopping cart.
-    * Manage quantities and remove items directly from the cart.
-    * Proceed to a guided checkout process for order placement.
-* **Order Management:**
-    * **(Admin)** Gain a complete overview of all placed orders for comprehensive tracking.
-    * **(Regular User)** Access personal order history, reviewing past purchases and their statuses.
-* **User Profile Management:** Users can view and easily update their profile information.
-* **Settings:** Personalize the app experience by customizing preferences such as theme (light/dark/system default) and notification settings.
-* **Firebase Cloud Messaging (FCM):** Integrated for efficient push notifications, allowing users to opt-in or opt-out of receiving important updates.
-* **Intuitive UI/UX:** Built with modern Material Design components, ensuring a clean, responsive, and user-friendly interface.
-* **Gesture Navigation:** A convenient swipe gesture (swipe left) to quickly access the Sales Activity for regular users, enhancing navigation speed.
-
----
-
 ## 📸 Visualization
 
 See the app in action with these animated demonstrations:
@@ -90,6 +60,8 @@ See the app in action with these animated demonstrations:
   <em>View and update user profiles, along with app settings for a personalized experience.</em>
 </p>
 
+
+
 ---
 
 ## 🛠️ Technologies Used
@@ -103,6 +75,34 @@ This application is built on a robust and modern technology stack, with **Google
     * **Cloud Firestore:** A flexible, scalable NoSQL cloud database used for storing all application data (products, categories, user profiles, and orders) in real-time.
     * **Firebase Cloud Messaging (FCM):** Enables reliable push notifications to users for updates and alerts.
 * **UI Components:** AndroidX, Material Design Components – for a consistent, modern, and user-friendly interface.
+
+---
+## 🌟 Features
+
+The application is packed with features designed to enhance sales operations and user experience:
+
+* **User Authentication:** Secure login/logout using Firebase Authentication, supporting both Email/Password and Google Sign-In for a smooth user onboarding experience.
+* **Role-Based Access Control:**
+    * **Admin Users:** Full administrative privileges to manage products, categories, users, and view all orders.
+    * **Regular Users:** Can browse products, add items to their cart, place orders, and track their personal order history.
+* **Product Management:**
+    * View a comprehensive list of products.
+    * **(Admin)** Complete CRUD (Create, Read, Update, Delete) operations for products.
+* **Category Management:**
+    * View product categories to organize items efficiently.
+    * **(Admin)** Full CRUD capabilities for categories.
+* **Shopping Cart System:** (For Regular Users)
+    * Seamlessly add products to a dynamic shopping cart.
+    * Manage quantities and remove items directly from the cart.
+    * Proceed to a guided checkout process for order placement.
+* **Order Management:**
+    * **(Admin)** Gain a complete overview of all placed orders for comprehensive tracking.
+    * **(Regular User)** Access personal order history, reviewing past purchases and their statuses.
+* **User Profile Management:** Users can view and easily update their profile information.
+* **Settings:** Personalize the app experience by customizing preferences such as theme (light/dark/system default) and notification settings.
+* **Firebase Cloud Messaging (FCM):** Integrated for efficient push notifications, allowing users to opt-in or opt-out of receiving important updates.
+* **Intuitive UI/UX:** Built with modern Material Design components, ensuring a clean, responsive, and user-friendly interface.
+* **Gesture Navigation:** A convenient swipe gesture (swipe left) to quickly access the Sales Activity for regular users, enhancing navigation speed.
 
 ---
 
