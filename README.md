@@ -47,16 +47,16 @@ See the app in action with these animated demonstrations:
 
 <p align="center">
   <h3>Order & User Management</h3>
-  <img src="demo/orders.gif" width="200" height="400">
-  <img src="demo/users.gif" width="200" height="400">
+  <img src="demo/orders.gif" width="150" height="400">
+  <img src="demo/users.gif" width="150" height="400">
   <br>
   <em>Admins can view all orders and manage user accounts. Regular users can view their order history.</em>
 </p>
 
 <p align="center">
   <h3>User Profile & Settings</h3>
-  <img src="demo/userprofile.gif" width="200" height="400">
-  <img src="demo/settings.gif" width="200" height="400">
+  <img src="demo/userprofile.gif" width="150" height="400">
+  <img src="demo/settings.gif" width="150" height="400">
   <br>
   <em>View and update user profiles, along with app settings for a personalized experience.</em>
 </p>
